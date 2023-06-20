@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   background-color: @color-base-white;
   padding: 0 20px;
+  position: relative;
 
   @media (min-width: @desktop-width) {
     padding: 0 40px;
@@ -27,6 +28,23 @@
   @media (min-width: @tablet-width) {
     display: flex;
     gap: 20px;
+  }
+
+  @media (max-width: @tablet-width) {
+    &--nojs,
+    &--opened {
+      position: absolute;
+      left: 0;
+      top: 60px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: @color-base-white;
+
+      .main-nav__link {
+        display: inline-block;
+      }
+    }
   }
 }
 
@@ -87,6 +105,10 @@
   background-size: 16px;
   background-image: url("../../img/icons/stack.svg#menu");
   background-color: transparent;
+
+  &--nojs {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
