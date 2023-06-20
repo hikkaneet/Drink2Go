@@ -2,13 +2,63 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <div class="page__body-container">
+      <header class="main-header">
+        <div class="main-nav">
+          <a class="main-nav__logo" href="./index.html">
+            <picture>
+              <source media="(min-width: 1440px)" width="170" height="36" srcset="./img/logo/logo-large.svg">
+              <source media="(min-width: 768px)" width="83" height="36" srcset="./img/logo/logo-medium.svg">
+              <img src="./img/logo/logo-small.svg" width="32" height="36" alt="Логотип">
+            </picture>
+            <span class="main-nav__text">Интернет-магазин<br>кофейных напитков</span>
+          </a>
+          <ul class="main-nav__list main-nav__list--nojs">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="./index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                Каталог
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                Доставка
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                О нас
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__user-list">
+            <li class="main-nav__user-item">
+              <a class="main-nav__user-link main-nav__user-link--profile" href="#">
+                <span class="main-nav__text">Войти</span>
+              </a>
+            </li>
+            <li class="main-nav__user-item">
+              <a class="main-nav__user-link main-nav__user-link--cart" href="#">
+                <span class="main-nav__text">Корзина</span>
+              </a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+      </header>
 
-    <script src="./js/script.js" defer></script>
+      <script src="./js/script.js" defer></script>
+    </div>
   </body>
 </html>
