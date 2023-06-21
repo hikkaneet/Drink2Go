@@ -40,10 +40,23 @@
       width: 100%;
       text-align: center;
       background-color: @color-base-white;
+      z-index: 2;
 
       .main-nav__link {
         display: inline-block;
       }
+    }
+  }
+}
+
+.main-nav__item {
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      color: @color-base-primary;
+      position: relative;
+      box-sizing: border-box;
+      border-bottom: 2px solid @color-base-primary;
     }
   }
 }

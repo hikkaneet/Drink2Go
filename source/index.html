@@ -19,8 +19,8 @@
             <span class="main-nav__text">Интернет-магазин<br>кофейных напитков</span>
           </a>
           <ul class="main-nav__list main-nav__list--nojs">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="./index.html">
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link" href="./index.html">
                 Главная
               </a>
             </li>
@@ -57,7 +57,64 @@
           </button>
         </div>
       </header>
-
+      <section class="slider swiper">
+        <div class="slider__container swiper-wrapper">
+          <div class="slide slide--decaf swiper-slide">
+            <picture class="slide__picture">
+              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/flat_white_img.png 1x, ./img/slider/flat_white_img@2x.png 2x">
+              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/flat_white_img.png 1x, ./img/slider/flat_white_img@2x.png 2x">
+              <img width="280" height="280" alt="Декаф Флэт Уайт" src="./img/slider/flat_white_img.png" srcset="./img/slider/flat_white_img@2x.png 2x">
+            </picture>
+            <div class="slide__content_wrapper">
+              <span class="slide__badge">Новинка!</span>
+              <h3 class="slide__title">Декаф Флэт Уайт</h3>
+              <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="slide__buy-wrapper">
+                <span class="slide__old-price">295₽</span>
+                <span class="slide__price">225₽</span>
+                <button class="slide__button button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide--latte swiper-slide">
+            <picture class="slide__picture">
+              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/lavender_img.png 1x, ./img/slider/lavender_img@2x.png 2x">
+              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/lavender_img.png 1x, ./img/slider/lavender_img@2x.png 2x">
+              <img width="280" height="280" alt="Лавандовый Латте" src="./img/slider/lavender_img.png" srcset="./img/slider/lavender_img@2x.png 2x">
+            </picture>
+            <div class="slide__content_wrapper">
+              <span class="slide__badge">Новинка!</span>
+              <h3 class="slide__title">Лавандовый Латте</h3>
+              <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="slide__buy-wrapper">
+                <span class="slide__old-price">285₽</span>
+                <span class="slide__price">265₽</span>
+                <button class="slide__button button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide--espresso swiper-slide">
+            <picture class="slide__picture">
+              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/espresso_img.png 1x, ./img/slider/espresso_img@2x.png 2x">
+              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/espresso_img.png 1x, ./img/slider/espresso_img@2x.png 2x">
+              <img width="280" height="280" alt="Тройной Эспрессо" src="./img/slider/espresso_img.png" srcset="./img/slider/espresso_img@2x.png 2x">
+            </picture>
+            <div class="slide__content_wrapper">
+              <span class="slide__badge">Новинка!</span>
+              <h3 class="slide__title">Тройной Эспрессо</h3>
+              <p class="slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="slide__buy-wrapper">
+                <span class="slide__old-price">395₽</span>
+                <span class="slide__price">375₽</span>
+                <button class="slide__button button">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__pagination swiper-pagination"></div>
+        <div class="slider__navigation swiper-button-prev"></div>
+        <div class="slider__navigation swiper-button-next"></div>
+      </section>
       <script type="module" src="./js/script.js" defer></script>
     </div>
   </body>
