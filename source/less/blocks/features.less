@@ -1,0 +1,87 @@
+.features__container {
+  padding: 50px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 20px 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 40px 120px;
+  }
+}
+
+.features__title {
+  margin-top: 4px;
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 32px;
+  padding-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 30px;
+    padding-top: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 0;
+    padding-top: 80px;
+  }
+}
+
+.features__item {
+  padding-top: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 52px;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--speed::before {
+    background-image: url("../../img/features/speed.svg");
+  }
+
+  &--fit::before {
+    background-image: url("../../img/features/fit.svg");
+  }
+
+  &--energy::before {
+    background-image: url("../../img/features/energy.svg");
+  }
+
+  &--eco::before {
+    background-image: url("../../img/features/eco.svg");
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-top: 0px;
+    padding-left: 72px;
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.features__item-description {
+  text-align: center;
+}
+
