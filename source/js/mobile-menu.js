@@ -14,7 +14,6 @@ export function mobileMenu() {
   const checkWindowSize = () => {
     if (window.innerWidth >= 768) {
       navList.classList.remove('main-nav__list--opened');
-      navToggle.removeEventListener('click', toggleNavList);
     }
   };
 

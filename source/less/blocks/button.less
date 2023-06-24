@@ -4,7 +4,24 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: @color-base-white;
-  background-color: @color-base-primary;
   border-radius: 4px;
+  cursor: pointer;
+
+  &--primary {
+    color: @color-base-white;
+    background-color: @color-base-primary;
+  }
+
+  &--secondary {
+    color: @color-base-primary;
+    background-color: @color-base-white;
+  }
+
+  &--to-cart {
+    padding: 8px 20px 8px 40px;
+    background-image: url("../../img/icons/stack.svg#cart");
+    background-repeat: no-repeat;
+    background-position: left 18px center;
+    background-size: 16px;
+  }
 }

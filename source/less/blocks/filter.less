@@ -1,0 +1,122 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 30%;
+  }
+}
+
+.filter__category {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.filter__input-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: @color-base-grey;
+  }
+}
+
+.filter__number-input {
+  width: 118px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 2px solid #9070EC;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 87px;
+  }
+}
+
+.filter__number-input::-webkit-outer-spin-button,
+.filter__number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.filter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.filter__buttons-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    grid-column: span 3;
+  }
+}
+
+.filter__select-wrapper {
+  padding-top: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.filter__select {
+  border: 0;
+  margin-left: 8px;
+  padding: 4px 30px 4px 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../../img/icons/stack.svg#chevron-down");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  background-color: transparent;
+  color: @color-base-primary;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: lowercase;
+}

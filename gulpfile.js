@@ -91,6 +91,11 @@ export function copyAssets () {
     .pipe(gulp.dest('build'));
 }
 
+export function copyVendor() {
+  return gulp.src('source/vendor/**/*')
+    .pipe(gulp.dest('build/vendor'));
+}
+
 export function startServer (done) {
   browser.init({
     server: {
@@ -122,6 +127,7 @@ function compileProject (done) {
     optimizeVector,
     createStack,
     copyAssets,
+    copyVendor,
     optimizeImages,
     createWebp
   )(done);

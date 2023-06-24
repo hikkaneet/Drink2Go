@@ -1,0 +1,102 @@
+.control {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+
+  &:hover .control-mark {
+    opacity: 0.6;
+  }
+
+  &--checkbox {
+    padding-left: 52px;
+  }
+}
+
+.control__mark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid @color-base-grey;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.control__label {
+  cursor: pointer;
+}
+
+.control__input:active + .control__mark {
+  opacity: 0.3;
+}
+
+.control__input:disabled + .control__mark {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.control__input:disabled ~ .control__label {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.control__input[type="radio"] + .control__mark {
+  border-radius: 50%;
+}
+
+.control__input[type="radio"]:checked + .control__mark {
+  border: 2px solid @color-base-primary;
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: @color-base-primary;
+  border-radius: 50%;
+
+}
+
+.control__input[type="checkbox"] + .control__mark {
+  width: 42px;
+  background-color: @color-base-grey;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  background-color: @color-base-primary;
+  border-color: @color-base-primary;
+}
+
+.control__input[type="checkbox"] + .control__mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: @color-base-white;
+  border-radius: 50%;
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: @color-base-white;
+  border-radius: 50%;
+}
+
+
