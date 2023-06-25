@@ -1,0 +1,31 @@
+.social {
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+
+  &--vk {
+    background-image: url("../../img/icons/stack.svg#vk");
+  }
+
+  &--pinterest {
+    background-image: url("../../img/icons/stack.svg#pinterest");
+  }
+
+  &--ok {
+    background-image: url("../../img/icons/stack.svg#ok");
+  }
+}
+
+
