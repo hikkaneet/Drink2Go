@@ -15,6 +15,7 @@
 
 .features__title {
   margin-top: 4px;
+  .font-title-h2();
 }
 
 .features__list {
@@ -71,7 +72,7 @@
     background-image: url("../../img/features/eco.svg");
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     padding-top: 0px;
     padding-left: 72px;
 
@@ -81,7 +82,14 @@
   }
 }
 
+.features__item-title {
+  .font-title-h3();
+}
+
 .features__item-description {
   text-align: center;
 }
 
+.features__badge {
+  .font-badge();
+}

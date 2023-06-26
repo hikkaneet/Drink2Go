@@ -17,9 +17,9 @@
     background-color: @color-lavender-latte;
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     position: relative;
-    margin-bottom: 238px;
+    margin-bottom: 296px;
     padding: 50px 80px 238px;
   }
 
@@ -30,7 +30,7 @@
  }
 
  .slide__picture {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     order: 1;
     position: absolute;
     bottom: -50%;
@@ -45,6 +45,7 @@
 
  .slide__badge {
   padding-top: 10px;
+  .font-badge();
 
    @media (min-width: @tablet-width) {
     order: -1;
@@ -53,16 +54,12 @@
 
  .slide__title {
    padding-top: 4px;
-   font-weight: 700;
-   font-size: 36px;
-   line-height: 48px;
-   text-align: center;
-   letter-spacing: 0.02em;
+   .font-slide-title();
  }
 
  .slide__description {
    padding-top: 10px;
-   text-align: center;
+   .font-slide-description-text();
 
    @media (min-width: @tablet-width) {
     padding-top: 16px;
