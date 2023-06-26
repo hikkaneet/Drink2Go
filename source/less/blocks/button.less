@@ -10,11 +10,35 @@
   &--primary {
     color: @color-base-white;
     background-color: @color-base-primary;
+
+    &:hover {
+      background-color: @color-primary-lighter;
+    }
+
+    &:active {
+      background-color: @color-primary-darker;
+    }
+
+    &:disabled {
+      background-color: @color-base-grey;
+    }
   }
 
   &--secondary {
     color: @color-base-primary;
     background-color: @color-base-white;
+
+    &:hover {
+      background-color: @color-primary-lighter;
+    }
+
+    &:active {
+      background-color: @color-primary-darker;
+    }
+
+    &:disabled {
+      background-color: @color-light-grey;
+    }
   }
 
   &--to-cart {

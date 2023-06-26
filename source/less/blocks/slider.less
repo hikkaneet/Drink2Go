@@ -7,9 +7,72 @@
 }
 
 .slider__navigation {
-  color: @color-base-primary;
+  height: 100%;
+  top: 20px;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    top: 35%
+  &--prev {
+    left: 0;
+    padding-left: 4px;
+    padding-right: 5px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 11px;
+      height: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='20' fill='none' viewBox='0 0 11 20'%3E%3Cpath fill='%237859CF' fill-rule='evenodd' d='M9.717 0 11 1.32 2.567 10 11 18.68 9.717 20 0 10 9.717 0Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      background-color: @color-base-primary;
+    }
+  }
+
+  &--next {
+    right: 0;
+    padding-right: 4px;
+    padding-left: 5px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 11px;
+      height: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='20' fill='none' viewBox='0 0 11 20'%3E%3Cpath fill='%237859CF' fill-rule='evenodd' d='M1.283 0 0 1.32 8.433 10 0 18.68 1.283 20 11 10 1.283 0Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      background-color: @color-base-primary;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--prev {
+
+      &:hover {
+        background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.00) 100%);
+      }
+
+      &:active {
+        background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+      }
+    }
+
+    &--next {
+
+      &:hover {
+        background: linear-gradient(-90deg, #ffffff 0%, rgba(255, 255, 255, 0.00) 100%);
+      }
+
+      &:active {
+        background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+      }
+    }
+  }
+
+  &:disabled {
+    color: @color-base-grey;
   }
 }

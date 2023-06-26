@@ -43,13 +43,28 @@
       z-index: 2;
 
       .main-nav__link {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
       }
     }
   }
 }
 
 .main-nav__item {
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
+  box-sizing: border-box;
+
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @color-base-secondary;
+
+    &:first-of-type {
+      border-top: 1px solid @color-base-secondary;
+    }
+  }
 
   &--current {
     @media (min-width: @tablet-width) {
@@ -62,11 +77,27 @@
 }
 
 .main-nav__link {
+  display: flex;
+  align-items: center;
   padding: 10px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    &:hover,
+    &:focus {
+      color: @color-base-primary;
+    }
+  }
+
+  &:active {
+    background-color: @color-base-secondary;
+  }
 }
 
 .main-nav__user-list {
@@ -85,28 +116,62 @@
   display: block;
   min-width: 60px;
   min-height: 60px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
+  position: relative;
 
-  &--profile {
-    background-image: url("../../img/icons/stack.svg#user");
+  @media (min-width: @tablet-width) {
+    &:hover,
+    &:focus {
+      color: @color-base-primary;
+    }
   }
 
-  &--cart {
-    background-image: url("../../img/icons/stack.svg#basket");
+  &:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px;
+    background-color: @color-base-black;
+
+    @media (min-width: @desktop-width) {
+      left: 20px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--profile:before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath fill='%23333' fill-rule='evenodd' d='M10.667 4a2.667 2.667 0 1 1-5.334 0 2.667 2.667 0 0 1 5.334 0ZM12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-8.803 8.31C4.437 11.277 6.16 10.667 8 10.667s3.564.61 4.803 1.643c1.232 1.027 1.864 2.362 1.864 3.69H16c0-1.768-.843-3.464-2.343-4.714-1.5-1.25-3.535-1.953-5.657-1.953s-4.157.703-5.657 1.953S0 14.232 0 16h1.333c0-1.328.632-2.663 1.864-3.69Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  &--cart:before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath fill='%23333' fill-rule='evenodd' d='m5.66 3.875.234 2.792h4.213l.232-2.792a2.347 2.347 0 1 0-4.678 0Zm5.784 2.792.224-2.68a3.68 3.68 0 1 0-7.336 0l.224 2.68H0L.19 8l.816 5.71A2.667 2.667 0 0 0 3.646 16h8.708a2.667 2.667 0 0 0 2.64-2.29L15.81 8 16 6.667h-4.556ZM11.334 8h-.054l-.222 2.667h3.024L14.462 8h-3.129ZM9.941 8H6.058l.222 2.667h3.44L9.942 8ZM4.72 8H1.537l.381 2.667h3.024L4.72 8Zm1.893 6.667L6.391 12H9.61l-.222 2.667H6.613ZM10.947 12l-.222 2.667h1.629c.663 0 1.226-.488 1.32-1.145L13.89 12h-2.944Zm-5.894 0 .222 2.667H3.646a1.333 1.333 0 0 1-1.32-1.145L2.11 12h2.944Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  &:hover::before {
+    background-color: @color-base-primary;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
-    background-position: left;
+    padding: 0 20px;
 
     .main-nav__text {
       padding-left: 24px;
     }
+  }
+}
+
+.main-nav__user-item {
+  &:active {
+    background-color: @color-base-secondary;
   }
 }
 
@@ -118,6 +183,11 @@
   background-size: 16px;
   background-image: url("../../img/icons/stack.svg#menu");
   background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @color-base-secondary;
+  }
 
   &--nojs {
     display: none;
@@ -126,6 +196,10 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.main-nav__list--opened .main-nav__toggle {
+  background-image: url("../../img/icons/stack.svg#close");
 }
 
 .main-nav__text {
@@ -138,3 +212,4 @@
     display: block;
   }
 }
+

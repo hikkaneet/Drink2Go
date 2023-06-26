@@ -35,3 +35,42 @@
     flex-direction: column;
   }
 }
+
+.catalog__select-wrapper {
+  padding-top: 40px;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.catalog__select {
+  display: inline-block;
+  width: auto;
+  border: 0;
+  border-radius: 4px;
+  margin-left: 8px;
+  padding: 4px 30px 4px 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../../img/icons/stack.svg#chevron-down");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 16px;
+  background-color: transparent;
+  color: @color-base-primary;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: lowercase;
+
+  &:hover {
+    background-color: @color-base-secondary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

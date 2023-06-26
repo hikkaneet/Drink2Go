@@ -1,7 +1,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  
+
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
   }
@@ -16,6 +16,31 @@
 .pagination__item {
   width: 40px;
   height: 40px;
+  border-radius: 4px;
+  background-color: @color-base-white;
+
+  &:hover {
+    background-color: @color-primary-lighter;
+  }
+
+  &:active {
+    background-color: @color-primary-darker;
+  }
+
+  &:disabled {
+    background-color: @color-light-grey;
+  }
+
+  &:has(.pagination__link--current) {
+    background-color: transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:has(.pagination__link--prev),
+    &:has(.pagination__link--next) {
+      width: fit-content;
+    }
+  }
 }
 
 .pagination__link {
@@ -26,28 +51,80 @@
   height: 100%;
   font-size: 16px;
   line-height: 24px;
+  border-radius: 4px;
   color: @color-base-primary;
-  background-color: @color-base-white;
+
+  &:hover,
+  &:active,
+  &:disabled {
+    color: @color-base-white;
+  }
 
   &--prev,
   &--next {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 10px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px;
+    background-color: @color-base-primary;
+
+    @media (max-width: @tablet-width) {
+      &:hover,
+      &:active,
+      &:disabled {
+        background-color: @color-base-white;
+      }
+    }
   }
 
   &--prev {
-    background-image: url("../../img/icons/stack.svg#chevron-left");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' fill='none' viewBox='0 0 6 10'%3E%3Cpath fill='%237859CF' fill-rule='evenodd' d='M4.808 0 6 1.239 2.383 5 6 8.761 4.808 10 0 5l4.808-5Z' clip-rule='evenodd'/%3E%3C/svg%3E");
   }
 
   &--next {
-    background-image: url("../../img/icons/stack.svg#chevron-right");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' fill='none' viewBox='0 0 6 10'%3E%3Cpath fill='%237859CF' fill-rule='evenodd' d='M1.192 0 0 1.239 3.617 5 0 8.761 1.192 10 6 5 1.192 0Z' clip-rule='evenodd'/%3E%3C/svg%3E");
   }
 
   &--current {
     font-weight: 600;
     color: inherit;
-    background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:disabled {
+      color: @color-base-primary;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    mask-image: none;
+
+    &--prev,
+    &--next {
+      background-color: @color-base-white;
+    }
   }
 }
 
+.pagination__link-text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: @color-primary-lighter;
+    }
+
+    &:active {
+      background-color: @color-primary-darker;
+    }
+
+    &:disabled {
+      background-color: @color-light-grey;
+    }
+  }
+}

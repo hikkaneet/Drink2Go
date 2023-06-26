@@ -22,10 +22,45 @@
   right: -12px;
   top: 50%;
   transform: translateY(-50%);
+
+  &:hover {
+    &:after {
+      background-color: @color-primary-opacity;
+    }
+  }
+
+  &:active {
+    &:after {
+      background-color: @color-base-primary;
+    }
+  }
+
+  &:disabled {
+    &:after {
+      background-color: @color-base-white;
+    };
+  }
 }
 
-.noUi-handle:before,
+.noUi-handle:before {
+  display: none;
+}
+
 .noUi-handle:after {
-display: none;
+  display: block;
+  background-color: @color-base-white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.range-slider[disabled] .noUi-handle {
+  border: 2px solid @color-base-grey;
+
+  &:after {
+    background-color: transparent;
+  }
+}
