@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  padding: 20px;
+  padding: 24px 20px 16px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -54,7 +54,11 @@
 }
 
 .main-footer__content-list {
-  padding-top: 12px;
+  margin: 0;
+  list-style-type: none;
+  padding: 12px 0 0;
+  display: flex;
+  flex-direction: column;
   gap: 4px;
 }
 
@@ -78,7 +82,7 @@
 }
 
 .main-footer__content-text {
-  margin-top: 16px;
+  margin: 20px 0 0;
   padding-left: 20px;
   position: relative;
 
@@ -115,8 +119,11 @@
   position: relative;
   padding-right: 16px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @color-base-primary;
+    outline-style: auto;
+    outline-offset: 2px;
 
     &::after {
       background-color: @color-base-primary;

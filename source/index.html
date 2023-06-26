@@ -5,9 +5,13 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="./vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="./vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <div class="page__body-container">
@@ -69,8 +73,8 @@
               <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/flat_white_img.webp 1x, ./img/slider/large/flat_white_img@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/flat_white_img.webp 1x, ./img/slider/medium/flat_white_img@2x.webp 2x" type="image/webp">
               <source srcset="./img/slider/small/flat_white_img.webp 1x, ./img/slider/small/flat_white_img@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/flat_white_img.png 1x, ./img/slider/large/flat_white_img@2x.jpg 2x">
-              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/flat_white_img.png 1x, ./img/slider/medium/flat_white_img@2x.jpg 2x">
+              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/flat_white_img.png 1x, ./img/slider/large/flat_white_img@2x.png 2x">
+              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/flat_white_img.png 1x, ./img/slider/medium/flat_white_img@2x.png 2x">
               <img width="280" height="280" alt="Декаф Флэт Уайт" src="./img/slider/small/flat_white_img.png" srcset="./img/slider/small/flat_white_img@2x.png 2x">
             </picture>
             <div class="slide__content_wrapper">
@@ -89,8 +93,8 @@
               <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/lavender_img.webp 1x, ./img/slider/large/lavender_img@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/lavender_img.webp 1x, ./img/slider/medium/lavender_img@2x.webp 2x" type="image/webp">
               <source srcset="./img/slider/small/lavender_img.webp 1x, ./img/slider/small/lavender_img@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/lavender_img.png 1x, ./img/slider/large/lavender_img@2x.jpg 2x">
-              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/lavender_img.png 1x, ./img/slider/medium/lavender_img@2x.jpg 2x">
+              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/lavender_img.png 1x, ./img/slider/large/lavender_img@2x.png 2x">
+              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/lavender_img.png 1x, ./img/slider/medium/lavender_img@2x.png 2x">
               <img width="280" height="280" alt="Лавандовый Латте" src="./img/slider/small/lavender_img.png" srcset="./img/slider/small/lavender_img@2x.png 2x">
             </picture>
             <div class="slide__content_wrapper">
@@ -109,8 +113,8 @@
               <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/espresso_img.webp 1x, ./img/slider/large/espresso_img@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/espresso_img.webp 1x, ./img/slider/medium/espresso_img@2x.webp 2x" type="image/webp">
               <source srcset="./img/slider/small/espresso_img.webp 1x, ./img/slider/small/espresso_img@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/espresso_img.png 1x, ./img/slider/large/espresso_img@2x.jpg 2x">
-              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/espresso_img.png 1x, ./img/slider/medium/espresso_img@2x.jpg 2x">
+              <source media="(min-width: 1440px)" width="600" height="600" srcset="./img/slider/large/espresso_img.png 1x, ./img/slider/large/espresso_img@2x.png 2x">
+              <source media="(min-width: 768px)" width="476" height="476" srcset="./img/slider/medium/espresso_img.png 1x, ./img/slider/medium/espresso_img@2x.png 2x">
               <img width="280" height="280" alt="Тройной Эспрессо" src="./img/slider/small/espresso_img.png" srcset="./img/slider/small/espresso_img@2x.png 2x">
             </picture>
             <div class="slide__content_wrapper">
@@ -141,7 +145,7 @@
             </li>
             <li class="features__item features__item--fit">
               <p class="features__item-title">Удобство</p>
-              <p class="features__item-description">Легко помещается и в карман, и в маленькую сумочку</p>
+              <p class="features__item-description">Легко помещается и в карман,<br> и в маленькую сумочку</p>
             </li>
             <li class="features__item features__item--energy">
               <p class="features__item-title">Бодрость</p>
@@ -149,7 +153,7 @@
             </li>
             <li class="features__item features__item--eco">
               <p class="features__item-title">Экологичность</p>
-              <p class="features__item-description">Вся упаковка сделана из перерабатываемых материалов</p>
+              <p class="features__item-description">Вся упаковка сделана<br> из перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
@@ -159,7 +163,7 @@
           <span class="catalog__badge">Каталог</span>
           <p class="catalog__title">Каталог кофейных напитков</p>
           <div class="catalog-container">
-          <form class="catalog__filter_form filter">
+          <form class="catalog__filter_form filter" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="filter__category">
                 <legend class="filter__label">Цена</legend>
                 <div class="range-slider" id="range-slider"></div>
@@ -258,8 +262,10 @@
             </div>
             <ul class="card-list">
               <li class="card">
-                <img width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-1.png" srcset="./img/catalog/coffee-can-1@2x.png 2x">
-                <p class="card__title">Декаф Флэт Уайт</p>
+                <a class="card__link" href="#">
+                  <img class="card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-1.png" srcset="./img/catalog/coffee-can-1@2x.png 2x">
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                </a>
                 <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="card__buy-wrapper">
                   <span class="card__price">225₽</span>
@@ -267,8 +273,10 @@
                 </div>
               </li>
               <li class="card">
-                <img width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-2.png" srcset="./img/catalog/coffee-can-2@2x.png 2x">
-                <p class="card__title">Декаф Флэт Уайт</p>
+                <a class="card__link" href="#">
+                  <img class="card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-2.png" srcset="./img/catalog/coffee-can-2@2x.png 2x">
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                </a>
                 <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="card__buy-wrapper">
                   <span class="card__price">225₽</span>
@@ -276,8 +284,10 @@
                 </div>
               </li>
               <li class="card">
-                <img width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-3.png" srcset="./img/catalog/coffee-can-3@2x.png 2x">
-                <p class="card__title">Декаф Флэт Уайт</p>
+                <a class="card__link" href="#">
+                  <img class="card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-3.png" srcset="./img/catalog/coffee-can-3@2x.png 2x">
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                </a>
                 <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="card__buy-wrapper">
                   <span class="card__price">225₽</span>
@@ -285,8 +295,10 @@
                 </div>
               </li>
               <li class="card">
-                <img width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-4.png" srcset="./img/catalog/coffee-can-4@2x.png 2x">
-                <p class="card__title">Декаф Флэт Уайт</p>
+                <a class="card__link" href="#">
+                  <img class="card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-4.png" srcset="./img/catalog/coffee-can-4@2x.png 2x">
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                </a>
                 <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="card__buy-wrapper">
                   <span class="card__price">225₽</span>
@@ -294,8 +306,10 @@
                 </div>
               </li>
               <li class="card">
-                <img width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-5.png" srcset="./img/catalog/coffee-can-5@2x.png 2x">
-                <p class="card__title">Декаф Флэт Уайт</p>
+                <a class="card__link" href="#">
+                  <img class="card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-5.png" srcset="./img/catalog/coffee-can-5@2x.png 2x">
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                </a>
                 <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="card__buy-wrapper">
                   <span class="card__price">225₽</span>
@@ -303,8 +317,10 @@
                 </div>
               </li>
               <li class="card">
-                <img width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-6.png" srcset="./img/catalog/coffee-can-6@2x.png 2x">
-                <p class="card__title">Декаф Флэт Уайт</p>
+                <a class="card__link" href="#">
+                  <img class="card__image" width="130" height="188" alt="Декаф Флэт Уайт" src="./img/catalog/coffee-can-6.png" srcset="./img/catalog/coffee-can-6@2x.png 2x">
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                </a>
                 <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <div class="card__buy-wrapper">
                   <span class="card__price">225₽</span>
@@ -326,16 +342,24 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <div class="map-container" id="map"></div>
+        <div class="map-container" id="map">
+          <picture class="map__picture">
+            <source media="(min-width: 1440px)" width="1440" height="540" srcset="./img/map/map-large.webp 1x, ./img/map/map-large@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" width="768" height="480" srcset="./img/map/map-medium.webp 1x, ./img/map/map-medium@2x.webp 2x" type="image/webp">
+            <source srcset="./img/map/map-small.webp 1x, ./img/map/map-small@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1440px)" width="1440" height="540" srcset="./img/map/map-large.jpg 1x, ./img/map/map-large@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="768" height="480" srcset="./img/map/map-medium.jpg 1x, ./img/map/map-medium@2x.jpg 2x">
+            <img width="320" height="480" alt="Санкт-Петербург, набережная реки Карповки, дом 5" src="./img/map/map-small.jpg" srcset="./img/map/map-small@2x.jpg 2x">
+          </picture>
+        </div>
       </section>
       <footer class="main-footer">
         <div class="main-footer__container">
           <div class="main-footer__content-wrapper main-footer__content-wrapper--wide">
             <a class="main-footer__logo" href="./index.html">
               <picture>
-                <source media="(min-width: 1440px)" width="170" height="36" srcset="./img/logo/logo-large.svg">
-                <source media="(min-width: 768px)" width="83" height="36" srcset="./img/logo/logo-medium.svg">
-                <img src="./img/logo/logo-small.svg" width="32" height="36" alt="Логотип">
+                <source media="(min-width: 768px)" width="170" height="36" srcset="./img/logo/logo-large.svg">
+                <img src="./img/logo/logo-medium.svg" width="83" height="36" alt="Логотип">
               </picture>
               <span class="main-footer__text">Интернет-магазин<br>кофейных напитков</span>
             </a>
@@ -371,7 +395,7 @@
           <div class="main-footer__content-wrapper">
             <span class="main-footer__content-title">Контакты</span>
             <p class="main-footer__content-text main-footer__content-text--address">Санкт-Петербург, набережная реки Карповки, дом 5</p>
-            <p class="main-footer__content-text main-footer__content-text--phone">+7 (999) 999-99-99</p>
+            <p class="main-footer__content-text main-footer__content-text--phone"><a href="tel:+79999999999">+7 (999) 999-99-99</a></p>
           </div>
         </div>
         <span class="main-footer__copyright">Разработано в <a class="main-footer__academy_link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></span>

@@ -7,9 +7,19 @@
   display: block;
   text-align: center;
   .font-badge();
+
+  @media (min-width: @tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 100px;
+  }
 }
 
 .catalog__title {
+  margin: 0;
+  padding-top: 4px;
   .font-title-h2();
 }
 
@@ -17,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px 40px;
+  padding: 0 20px 40px;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
@@ -38,10 +48,11 @@
 }
 
 .catalog__select-wrapper {
-  padding-top: 40px;
+  padding-top: 36px;
   border-radius: 4px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 50px;
     display: flex;
     justify-content: flex-end;
     align-items: center;

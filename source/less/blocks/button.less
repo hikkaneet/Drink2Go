@@ -1,4 +1,5 @@
 .button {
+  border: 0;
   padding: 8px 20px;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
@@ -30,20 +31,23 @@
     background-color: @color-base-white;
 
     &:hover {
+      color: @color-base-white;
       background-color: @color-primary-lighter;
     }
 
     &:active {
+      color: @color-base-white;
       background-color: @color-primary-darker;
     }
 
     &:disabled {
+      color: @color-base-white;
       background-color: @color-light-grey;
     }
   }
 
   &--to-cart {
-    padding: 8px 20px 8px 40px;
+    padding: 8px 20px 8px 44px;
     background-image: url("../../img/icons/stack.svg#cart");
     background-repeat: no-repeat;
     background-position: left 18px center;

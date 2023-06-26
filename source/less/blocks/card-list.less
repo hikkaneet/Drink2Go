@@ -1,11 +1,15 @@
 .card-list {
   display: grid;
+  margin: 0;
+  list-style-type: none;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  padding: 20px 0 40px;
+  gap: 18px;
+  padding: 14px 0 40px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
+    padding: 32px 0 40px;
+    gap: 30px;
   }
 
   @media (min-width: @desktop-width) {
